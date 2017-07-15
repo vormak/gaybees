@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 700px;
+        width: 100%;
+       }
+      h3 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>El U - Couch Surfing Map</h3>
+    <div id="map"></div>
+    <script>
+function initMap() { 
+var uluru = {lat: 48, lng: 2}; 
+var map = new google.maps.Map(document.getElementById('map'), { zoom: 4, center: uluru });
+var icon = 'http://i.imgur.com/7hKbCdO.png';
+var marker = new google.maps.Marker({ position: uluru, map: map, icon: icon, title: 'some gay french guys yo' });
+var test = {lat: -25.397, lng: -51.4677, icon: icon};
+var marker2 = new google.maps.Marker({ position: test, map: map, icon: icon, title: 'Vormak, the Great'});
+var test3 = {lat: 42.6, lng: -82.96 };
+var marker3 = new google.maps.Marker({ position: test3, map: map, icon: icon, title: 'Glorious Leader, Chuck the First'});
+var Ranik = {lat: 51.462193, lng: -2.591809 };
+var markerRanik = new google.maps.Marker({ position: Ranik, map: map, icon: icon, title: 'Ranik street'});
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX0FmOHjLaIlDbxO7-TQDoWSo1tKZhHBk&callback=initMap">
+    </script>
+  </body>
+</html>
